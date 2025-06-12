@@ -1,48 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-
-//The detection system is still wonk, but I'm working on it. I'm not too sure at this point if it's due to the code or the fact that we probably need to flesh out the character models and their components first
 
 public class Observer : MonoBehaviour
 {
     public Transform player;
 
-    bool m_IsPlayerInRange;
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform == player)
-        {
-            m_IsPlayerInRange = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.transform == player)
-        {
-            m_IsPlayerInRange = false;
-        }
-    }
-
     void Update()
     {
-        if (m_IsPlayerInRange)
-        {
-            Vector3 direction = player.position - transform.position + Vector3.up;
-            Ray ray = new Ray(transform.position, direction);
-            RaycastHit raycastHit;
+        
+        Vector3 direction = player.position - transform.position;
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        RaycastHit raycastHit;
 
-            if (Physics.Raycast(ray, out raycastHit))
+        if (Physics.Raycast(transform.position, direction, out raycastHit))
+        {
+
+            if (Physics.Raycast(transform.position, fwd, 4) == player)
             {
-                if (raycastHit.collider.transform == player)
-                {
-                    Debug.Log("Game End");
-                }
+                Debug.Log("Seen!");
+                // enemy can see the player!
             }
+            //else
+           // {
+           //     Debug.Log("Must have been the wind");
+                // there is something obstructing the view
+            //}
+
         }
+
     }
 
 }
