@@ -10,7 +10,7 @@ public class GameManager1 : MonoBehaviour
     void Start()
     {
         //Sets the spawn position and look rotation of the player and spawns it
-        Vector3 spawnPosition = new Vector3(-8.2f, 3, 7.6f);
+        Vector3 spawnPosition = new Vector3(-8.2f, 4, 7.6f);
         Quaternion playerRotation = Quaternion.LookRotation(Vector3.right);
         Instantiate(player, spawnPosition, playerRotation);
 
