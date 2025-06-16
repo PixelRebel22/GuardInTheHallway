@@ -196,7 +196,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -210,7 +210,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &1216006570776502916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,22 +253,22 @@ MonoBehaviour:
   invertLookY: 0
   clampLookY: 90
   crouchSpeed: 3
-  walkSpeed: 15
-  runSpeed: 25
-  slideSpeed: 25
+  walkSpeed: 10
+  runSpeed: 15
+  slideSpeed: 15
   slideDuration: 2.2
-  gravity: -9.83
-  jumpHeight: 2.5
-  groundCheckY: 0.33
-  ceilingCheckY: 1.83
-  sphereCastRadius: 0.25
-  sphereCastDistance: 0.75
+  gravity: -2.14
+  jumpHeight: 5.27
+  groundCheckY: 0.58
+  ceilingCheckY: 1.58
+  sphereCastRadius: 0.5
+  sphereCastDistance: 1
   raycastLength: 0.75
   rayOriginOffset1: {x: -0.2, y: 0, z: 0.16}
   rayOriginOffset2: {x: 0.2, y: 0, z: -0.16}
-  showGizmos: 0
+  showGizmos: 1
   xRotation: 0
-  isGrounded: 1
+  isGrounded: 0
   groundSlopeAngle: 0
   groundSlopeDir: {x: 0, y: 0, z: 0}
   isSlipping: 0
@@ -276,4 +276,4 @@ MonoBehaviour:
   slideTimer: 0
   slideForward: {x: 0, y: 0, z: 0}
   isCeiling: 0
-  cursorActive: 1
+  cursorActive: 0
