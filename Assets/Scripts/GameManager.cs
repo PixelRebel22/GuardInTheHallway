@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GameManager1 : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject guard;
@@ -9,10 +9,7 @@ public class GameManager1 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Sets the spawn position and look rotation of the player and spawns it
-        Vector3 spawnPosition = new Vector3(-3.2f, 7, 7.6f);
-        Quaternion playerRotation = Quaternion.LookRotation(Vector3.right);
-        Instantiate(player, spawnPosition, playerRotation);
+        SpawnPlayer();
 
         //Sets the spawn position of the guard and spawns it
         Vector3 guardSpawnPosition = new Vector3(-30.66f, 2.4f, -8.15f);
@@ -23,5 +20,14 @@ public class GameManager1 : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SpawnPlayer()
+    {
+        //Sets the spawn position and look rotation of the player and spawns it
+        Vector3 spawnPosition = new Vector3(-8.2f, 4, 7.6f);
+        Quaternion playerRotation = Quaternion.LookRotation(Vector3.right);
+        Instantiate(player, spawnPosition, playerRotation);
+        Debug.Log("Player Spawned");
     }
 }

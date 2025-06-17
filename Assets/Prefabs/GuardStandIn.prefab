@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 3810671884857519271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 0.25, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3.69}
+  m_LocalScale: {x: 1, y: 0.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5994474703267892776}
@@ -55,7 +55,7 @@ CapsuleCollider:
   m_Radius: 0.7
   m_Height: 4
   m_Direction: 2
-  m_Center: {x: 0, y: 0.8, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 2.9}
 --- !u!114 &8554159442507968741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +69,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 391497853681552671, guid: bc3d83d3afb666441a505b5605236bf4, type: 3}
+  enemyBehavior: {fileID: -8296054512080501374}
+  gameEnding: {fileID: 7671806729772395860, guid: c6cbffffe8ee47b40bd050c811eb8cc4, type: 3}
 --- !u!1 &6526230039594788675
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,3 +331,5 @@ MonoBehaviour:
   - {fileID: 328290240962635586, guid: 8f0725ac94866eb468d2b0dbb581684c, type: 3}
   - {fileID: 640606819742937332, guid: 2874e96a2dd9ffb4898158b50cc18780, type: 3}
   - {fileID: 7039673154334739889, guid: e11128e0f98a37f44b1e8fb1bfe17093, type: 3}
+  m_CurrentWaypointIndex: 0
+  isPaused: 0
