@@ -24,13 +24,12 @@ public class Observer : MonoBehaviour
         RaycastHit raycastHit;
         currentWaypoint = (enemyBehavior.m_CurrentWaypointIndex + 1) % enemyBehavior.waypoints.Length;
 
-        Debug.DrawLine(transform.position, player.position, Color.red);
         if (Physics.Raycast(transform.position, direction, out raycastHit))
         {
 
             if (Physics.Raycast(transform.position, fwd, 4) == player)
             {
-                Debug.Log("Seen!");
+                //Debug.Log("Seen!");
                 // enemy can see the player!
             }
             //else

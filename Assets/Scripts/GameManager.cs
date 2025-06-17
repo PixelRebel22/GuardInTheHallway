@@ -1,9 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject guard;
+   
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
