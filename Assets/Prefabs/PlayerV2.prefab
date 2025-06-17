@@ -262,14 +262,14 @@ MonoBehaviour:
   slideDuration: 2.2
   gravity: -9.83
   jumpHeight: 2.5
-  groundCheckY: 0.33
-  ceilingCheckY: 1.83
-  sphereCastRadius: 0.25
+  groundCheckY: -0.54
+  ceilingCheckY: 1.67
+  sphereCastRadius: 0.5
   sphereCastDistance: 0.75
   raycastLength: 0.75
   rayOriginOffset1: {x: -0.2, y: 0, z: 0.16}
   rayOriginOffset2: {x: 0.2, y: 0, z: -0.16}
-  showGizmos: 0
+  showGizmos: 1
   xRotation: 0
   isGrounded: 1
   groundSlopeAngle: 0
