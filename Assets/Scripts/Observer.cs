@@ -24,6 +24,7 @@ public class Observer : MonoBehaviour
         RaycastHit raycastHit;
         currentWaypoint = (enemyBehavior.m_CurrentWaypointIndex + 1) % enemyBehavior.waypoints.Length;
 
+        Debug.DrawLine(transform.position, player.position, Color.red);
         if (Physics.Raycast(transform.position, direction, out raycastHit))
         {
 

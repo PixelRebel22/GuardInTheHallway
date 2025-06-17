@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour, IInteractable
     // Update is called once per frame
     void Update()
     {
+        
         if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance)
         {
             isPaused = true;
